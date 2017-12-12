@@ -1,0 +1,83 @@
+*{margin:0;padding:0;}
+li{list-style: none;}
+a{text-decoration: none;color:#000;}
+header video{ position: fixed; left：0;bottom: 0;min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;background-size: cover; }
+header div#had{width: 100%;height: 100px;}
+header div#had ul{float:left;}
+header div#had ul.logo{width: 15%;margin-left: 5%;height: 100px;}
+header div#had ul.logo li{padding-top: 20px;}
+header div#had ul.daohang{width: 45%;height: 100px;margin-left:24%;position: relative;overflow:hidden;}
+header div#had ul.daohang li{width: 16%;float:left;height: 90px;font-size:18px;text-align:center;font-family:"微软雅黑";position: relative;z-index: 2;color:#0f0;}
+header div#had ul.daohang li.shouye{background: #000;opacity: 0.9;}
+header div#had ul.daohang li:hover{background: #000;transition:2s;opacity:0.9;}
+header div#had ul.daohang li p{margin-top:25px;}
+header div#had ul.daohang li span{font-size:15px;}
+header div#had ul.daohang li.bg{width: 16%;height: 10px;overflow:hidden;position: absolute;top:90px;left:0;z-index:1;border:none;}
+header div#had ul.zhuce{width: 8%;height: 100px;}
+header div#had ul.zhuce li.zhucelogo{width: 100%;height: 60px;}
+header div#had ul.zhuce li.zhucelogo img{margin-top:15px;margin-left:25%;}
+header div#had ul.zhuce li.dlzhuce{height: 40px;width: 100%;text-align:center;line-height: 36px;font-size:13px;}
+header div#had ul.zhuce li.dlzhuce a{color:#0f0;}
+
+section{width: 100%;height:80px;margin-top:550px;}
+section div{width: 90%;margin-left:5%;height: 80px;}
+section div li{width: 19%;height:80px;margin-left:5%;float:left;text-align:center;line-height:25px;font-size: 18px;}
+section div li:hover p{color:#f00;transition:1.5s;}
+section div li p{padding-top:15px;color:#0f0;font-family: "微软雅黑";transition:1.5s;}
+
+article{width: 100%;height: 1420px;margin-top:-30px;}
+
+article div.smallvideo{width: 30%;margin-left:5%;height: 360px;margin-left:65%;margin-top:-390px;}
+article div.smallvideo video{width: 100%;}
+article div.smallvideo ul.jieshao{width: 100%;height: 220px;}
+
+article ul.jieshao div#news span{display:block;padding:8px 2px;font-size:18px;font-weight:bold;background: #000;width: 100px;height:57px;color:#000;font-weight:800;color:#0f0;line-height: 57px;}
+article ul.jieshao div#news span.on{color:#f00;}
+article ul.jieshao div#news div{width: 240px;height: 150px;margin-top:10px;display:none;}
+article ul.jieshao div#news div.on{display:block;margin-left:100px;margin-top:-216px;}
+article ul.jieshao div#news img{width:300px;height: 216px;}
+
+article div.zhandui{width: 100%;height: 80px;margin-top:20px;}
+article div.zhandui ul li{width: 90%;height: 80px;font-size:30px;font-weight:bold;color:#fff;line-height:80px;margin-left: 5%;text-align: center;}
+article div.zhandui ul li a{color:#fff;}
+article div.zhandui ul div#menu{width: 100%;height: 50px;overflow:hidden;background: url(images/bg.jpg);z-index: 1800;}
+
+article div.zhandui ul div#menu ul.menu1{width: 100%;height:50px;text-align: center;font-family: "微软雅黑";color:#0f0;}
+article div.zhandui ul div#menu ul.menu1 li{font-size:20px;line-height:50px;}
+
+article div.zhandui ul div#menu ul.menu2{width: 40%;height: 185px;border:1px solid #fff;margin-left:30%;margin-top:10px;}
+article div.zhandui ul div#menu ul.menu2 li.menu21{width: 30%;height: 185px;}
+article div.zhandui ul div#menu ul.menu2 li.menu21 img{margin-top:20%;}
+article div.zhandui ul div#menu ul.menu2 li{float:left;width: 25%;height: 60px;font-size:12px;text-align:left;line-height:50px;}
+article div.zhandui ul div#menu ul.menu3{width: 90%;margin-left:5%;font-size:18px;color:#fff;line-height:30px;margin-top:20px;}
+article div.zhandui ul div#menu ul.menu4{width: 90%;margin-left: 5%;height: 530px;}
+article div.zhandui ul div#menu ul.menu4 li.zyry{font-size:22px;color:#0f0;line-height:50px;}
+article div.zhandui ul div#menu ul.menu4 li{font-size: 22px;line-height: 26px;height:26px;font-family: "微软雅黑";}
+article div.duiyuan{width: 90%;height: 900px;margin-top:50px;border:1px solid #fff;margin-left:5%;}
+article div.duiyuan li.dy1{height: 80px;font-size:30px;font-weight:bold;color:#fff;line-height:80px;text-align: center;width: 100%;}
+article div.duiyuan li{width: 50%;height: 150px;float:left;margin-top:10px;}
+article div.duiyuan li p{margin-left:35%;line-height:40px;margin-top:20px;color:#fff;font-size:20px;}
+aside{width: 90%;height: 700px;margin-left: 5%;}
+aside div{float:left;}
+aside div.zdsp{width: 100%;height: 340px;}
+aside div.zdsp ul{width: 21%;height: 100%;float:left;margin-right:2%;margin-top:10px;}
+aside div.zdsp ul li.zdsp1{width: 100%;height: 160px;overflow:hidden;}
+aside div.zdsp ul li.zdsp1 img{width: 100%;height: 100%;transition:1.5s;}
+aside div.zdsp ul li.zdsp1 img:hover{transform: scale(1.2);transition:1.5s;}
+aside div.zdsp ul li span{font-size:20px;font-weight:bold;color:#0f0;}
+aside div.zdsp ul li{font-size:14px;font-weight:bold;color:#fff;margin-left:5%;line-height:34px;}
+footer{width: 100%;height: 220px;border-top:4px solid #0f0;}
+footer div{float:left;}
+footer div.footer1{width: 20%;height: 100%;margin-left:5%;}
+footer div.footer1 ul li{width: 60%;margin-left:21%;height: 160px;padding-top:17px;}
+footer div.footer1 ul li img{width: 100%;height: 100%;}
+footer div.footer2{width: 23%;height: 100%;}
+footer div.footer2 ul{margin-top:20px;}
+footer div.footer2 ul li.dazi{width: 100%;height: 30px;font-size:20px;color:#fff;font-weight:bold;line-height:100%;}
+footer div.footer2 ul li{width: 100%;height:30px;line-height:30px;font-size:12px;color:#ccc;}
+footer div.footer3{width: 47%;height: 100%;}
+footer div.footer3 ul{width: 100%;height: 80px;margin-top: 10px;}
+footer div.footer3 ul.footer31 img{margin-left:62%;margin-top:30px;}
+footer div.footer3 ul li{width: 48%;height: 30px;margin-left:51%;}
+footer div.footer3 ul li.smalltp{width: 10%;margin-left:88%;}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/cssabout.css" type="text.css">
+<style>
+	*{margin:0;padding:0;}
+li{list-style: none;}
+*{margin:0;padding:0;}
+li{list-style: none;}
+a{text-decoration: none;color:#000;}
+header div#had{width: 100%;height: 100px;}
+header div#had ul{float:left;}
+header div#had ul.logo{width: 15%;margin-left: 5%;height: 100px;}
+header div#had ul.logo li{padding-top: 20px;}
+header div#had ul.daohang{width: 45%;height: 100px;margin-left:24%;position: relative;overflow:hidden;}
+header div#had ul.daohang li{width: 16%;float:left;height: 90px;font-size:18px;text-align:center;font-family:"微软雅黑";position: relative;z-index: 2;color:#0f0;}
+header div#had ul.daohang li.guanyu{background: #000;opacity: 0.9;}
+header div#had ul.daohang li:hover{background: #000;transition:2s;opacity:0.9;}
+header div#had ul.daohang li p{margin-top:25px;}
+header div#had ul.daohang li span{font-size:15px;}
+header div#had ul.daohang li.bg{width: 16%;height: 10px;overflow:hidden;position: absolute;top:90px;left:16%;z-index:1;border:none;}
+header div#had ul.zhuce{width: 8%;height: 100px;}
+header div#had ul.zhuce li.zhucelogo{width: 100%;height: 60px;}
+header div#had ul.zhuce li.zhucelogo img{margin-top:15px;margin-left:25%;}
+header div#had ul.zhuce li.dlzhuce{height: 40px;width: 100%;text-align:center;line-height: 36px;font-size:13px;}
+header div#had ul.zhuce li.dlzhuce a{color:#0f0;}
+
+section{width: 100%;height: 500px;border:1px solid #000;}
+section video{width: 100%;height: 500px;}
+
+aside{width: 100%;height: 220px;border:1px solid #000;}
+aside div{width: 90%;margin-left:5%;height: 120px;margin-top: 50px;border:1px solid #000;}
+aside div ul{width: 25%;float:left;height: 120px;}
+aside div ul li{width: 100%;height: 60px;line-height:30px;margin-top:30px;text-align: center;color:#0f0;font-size:16px;font-weight:bold;}
+aside div ul li:hover{color:#fff;}
+article div{width: 90%;height: 180px;margin-left:5%;}
+article div ul li{width: 100%;height:120px;line-height:40px;font-weight: bold;font-size: 20px;color:#fff;}
+footer{width: 100%;height: 240px;border-top:4px solid #0f0;}
+footer div{float:left;}
+footer div.footer1{width: 20%;height: 100%;margin-left:5%;}
+footer div.footer1 ul li{width: 60%;margin-left:21%;height: 160px;padding-top:17px;}
+footer div.footer1 ul li img{width: 100%;height: 100%;}
+footer div.footer2{width: 23%;height: 100%;}
+footer div.footer2 ul{margin-top:20px;}
+footer div.footer2 ul li.dazi{width: 100%;height: 30px;font-size:20px;color:#fff;font-weight:bold;line-height:100%;}
+footer div.footer2 ul li{width: 100%;height:30px;line-height:30px;font-size:12px;color:#ccc;}
+footer div.footer3{width: 47%;height: 100%;}
+footer div.footer3 ul{width: 100%;height: 80px;margin-top: 10px;}
+footer div.footer3 ul.footer31 img{margin-left:62%;margin-top:30px;}
+footer div.footer3 ul li{width: 60%;height: 30px;margin-left:38%;color:#fff;margin-top:10px;}
+
+</style>
+</head>
+
+<body>
+<header>
+<div id="had" style="background:url(images/fbg.jpg);opacity: 0.9; " >
+<ul class="logo">
+<li><a href="#"><img src="images/logo2.png"></a></li>	
+</ul>
+<ul class="daohang" id="nav">
+	<a href="index.html"><li><p>首页<br /><span>HOME</span></p></li></a>
+	<a href="#"><li class="guanyu"><p>关于<br /><span>ABOUT</span></p></li></a>
+	<a href="#"><li><p>公益<br /><span>CHARITY</span></p></li></a>
+	<a href="#"><li><p>动态<br /><span>NEWS</span></p></li></a>
+	<a href="#"><li><p>商城<br /><span>SHOP</span></p></li></a>
+	<a href="#"><li><p>论坛<br /><span>RORUM</span></p></li></a>
+	<li class="bg" style="background:url(images/dhheng.png) no-repeat -6px -2px;background-size: 110%;"></li>
+</ul>
+<script>
+		var oUl1=document.getElementById("nav");
+		var oLi=oUl1.getElementsByTagName("li");
+		var oBg=oLi[oLi.length-1];
+		var iSpeed=0;
+		var timer=null;
+
+		for(var i=0;i<oLi.length;i++){
+		oLi[i].onmouseover=function(){
+			startMovea(oBg,this.offsetLeft);
+		}
+		oLi[i].onmouseout=function(){
+			startMovea(oBg,oLi[1].offsetLeft);
+		}	
+		}
+        function startMovea(obj,iTarget){
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function(){
+        iSpeed+=(iTarget-obj.offsetLeft)/5;
+        iSpeed*=0.7;
+        
+        //二.弹性运动
+        if(Math.abs(iSpeed)<1 && Math.abs(obj.offsetLeft-iTarget)<1){
+        	obj.style.left=iTarget+'px';
+        	clearInterval(obj.timer);
+        }else{
+        	obj.style.left=obj.offsetLeft+iSpeed+'px';
+        }
+        
+
+        },40);
+        }
+	</script>
+<ul class="zhuce">
+<li class="zhucelogo">
+<a href="#"><img src="images/timg.png" /></a>	
+</li>
+<li class="dlzhuce">
+<a href="#">登录丨注册</a>	
+</li>	
+</ul>		
+</div>
+	
+</header>
+
+<section style="background:url(images/bg.jpg);">
+<div>
+	<ul>
+		<li>
+		<video autoplay="autoplay" loop="loop" >
+        <source src="images/index.mp4" type="video/mp4">
+        </video>
+		</li>
+	</ul>
+</div>
+</section>
+
+<aside style="background: url(images/aboutbgactive.gif) no-repeat;background-size: 100%;">
+    <div>
+		<ul style="background:url(images/aboutbg.png) no-repeat 8px 0;">
+		<a href="javascript:void;"><li>
+		英雄联盟一队<br />
+		LEAGUE OF LEGENDS OF ONE	
+		</li></a>	
+		</ul>
+		<ul style="background:url(images/aboutbg.png) no-repeat 8px 0;">
+		<a href="javascript:void;"><li>
+		英雄联盟二队<br />
+		LEAGUE OF LEGENDS OF TWO
+		</li></a>
+		</ul>
+		<ul style="background:url(images/aboutbg.png) no-repeat 8px 0;">
+		<a href="javascript:void;"><li>
+		守望先锋战队<br />
+		OVERWATCH
+		</li></a>	
+		</ul>
+		<ul style="background:url(images/aboutbg.png) no-repeat 8px 0;">
+		<a href="javascript:void;"><li>
+		绝地求生战队<br />
+		PLAYERRUNKNOW'SBATTLEOROUNDS	
+		</li></a>
+		</ul>
+	</div>	
+</aside>
+<article style="background:url(images/bgbg.jpg) no-repeat;">
+	<div>
+		<ul>
+			<li style="background:url(images/abi1.png) no-repeat 10px 8px;height:40px;line-height:40px;font-weight:bold;font-size:20px;">
+			&nbsp;&nbsp;&nbsp;简介</li>
+			<li>
+			&nbsp;&nbsp;&nbsp;OMG电子竞技俱乐部隶属于“噢麦嘎（上海）网络科技有限公司”
+			<br />
+            &nbsp;&nbsp;&nbsp;2012年6月成立于四川成都，成立初期专注于《英雄联盟》项目，
+            <br />
+            &nbsp;&nbsp;&nbsp;成立后于当年开始征战国内联赛。</li>
+
+		</ul>
+	</div>
+	<div>
+		<ul>
+			<li style="background:url(images/abi2.png) no-repeat 10px 8px;height:40px;line-height:40px;font-weight:bold;font-size:20px;">
+			&nbsp;&nbsp;&nbsp;精神</li>
+			<li>
+			&nbsp;&nbsp;&nbsp;不惧前路，坚持梦想
+			<br />
+            &nbsp;&nbsp;&nbsp;在逆境中永不言弃
+            <br />
+            &nbsp;&nbsp;&nbsp;只有平凡的坚持，才能换来舞台上的一鸣惊人</li>
+
+		</ul>
+	</div>
+	<div>
+		<ul>
+			<li style="background:url(images/abi3.png) no-repeat 10px 8px;height:40px;line-height:40px;font-weight:bold;font-size:20px;">
+			&nbsp;&nbsp;&nbsp;宗旨</li>
+			<li>
+			&nbsp;&nbsp;&nbsp;服务于所有电竞爱好者
+			<br />
+            &nbsp;&nbsp;&nbsp;精彩的职业赛事内容
+            <br />
+            &nbsp;&nbsp;&nbsp;完善的青训体系，培养本土优秀电竞选手</li>
+
+		</ul>
+	</div>
+	<div>
+		<ul>
+			<li style="background:url(images/abi1.png) no-repeat 10px 8px;height:40px;line-height:40px;font-weight:bold;font-size:20px;">
+			&nbsp;&nbsp;&nbsp;荣耀</li>
+			<li>
+			&nbsp;&nbsp;&nbsp;2013 LPL季后赛冠军
+			<br />
+            &nbsp;&nbsp;&nbsp;2013-11 WCG世界总决赛亚军
+            <br />
+            &nbsp;&nbsp;&nbsp;2014-10 韩国S4世界总决赛四强</li>
+
+		</ul>
+	</div>
+</article>
+<footer style="background:url(images/bg.jpg);">
+<div class="footer1" style="background: url(images/pewm.png) no-repeat 45px 0;background-size: 70%;">
+	<ul>
+	<li><img src="images/ewm.jpg" /></li>	
+	</ul>
+</div>
+<div class="footer2">
+	<ul>
+		<li class="dazi">扫码下载</li>
+		<li class="dazi">OMG APP</li>
+		<li>电话021-31027100</li>
+		<li>商务合作邮箱：market@omg-esc.com 李先生</li>
+		<li>基地地址：上海市宝山区长江路258号中成智谷A4A5</li>
+	</ul>
+</div>
+<div class="footer3">
+    <ul class="footer31">
+    	<img src="images/hzhb.png">
+    </ul>
+	<ul>
+		<li>Copyright © 2015 噢麦嘎（上海）网络科技有限公司</li>
+		<li>All Rights Reserved. 沪ICP备15005712号-1</li>
+		<li class="smalltp">
+			<a href="javascript:void;"><img src="images/ic_sina.png"></a>
+			<a href="javascript:void;"><img src="images/ic_wx.png"></a>
+		</li>
+	</ul>	
+</div>	
+</footer>
+</body>
+</html>

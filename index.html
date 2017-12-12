@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<title>Document</title>
+<link rel="stylesheet" href="css/cssindex.css" type="text.css">
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/play.css">
+
+<link rel="stylesheet" type="text/css" href="bootstrap-3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/ease-my.js"></script>
+<script src="js/main.js"></script>
+<style>
+	*{margin:0;padding:0;}
+li{list-style: none;}
+a{text-decoration: none;color:#000;}
+header video{ position: fixed; left：0;bottom: 0;min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;background-size: cover; }
+header div#had{width: 100%;height: 100px;}
+header div#had ul{float:left;}
+header div#had ul.logo{width: 15%;margin-left: 5%;height: 100px;}
+header div#had ul.logo li{padding-top: 20px;}
+header div#had ul.daohang{width: 45%;height: 100px;margin-left:24%;position: relative;overflow:hidden;}
+header div#had ul.daohang li{width: 16%;float:left;height: 90px;font-size:18px;text-align:center;font-family:"微软雅黑";position: relative;z-index: 2;color:#0f0;}
+header div#had ul.daohang li.shouye{background: #000;opacity: 0.9;}
+header div#had ul.daohang li:hover{background: #000;transition:2s;opacity:0.9;}
+header div#had ul.daohang li p{margin-top:25px;}
+header div#had ul.daohang li span{font-size:15px;}
+header div#had ul.daohang li.bg{width: 16%;height: 10px;overflow:hidden;position: absolute;top:90px;left:0;z-index:1;border:none;}
+header div#had ul.zhuce{width: 8%;height: 100px;}
+header div#had ul.zhuce li.zhucelogo{width: 100%;height: 60px;}
+header div#had ul.zhuce li.zhucelogo img{margin-top:15px;margin-left:25%;}
+header div#had ul.zhuce li.dlzhuce{height: 40px;width: 100%;text-align:center;line-height: 36px;font-size:13px;}
+header div#had ul.zhuce li.dlzhuce a{color:#0f0;}
+
+section{width: 100%;height:80px;margin-top:550px;}
+section div{width: 90%;margin-left:5%;height: 80px;}
+section div li{width: 19%;height:80px;margin-left:5%;float:left;text-align:center;line-height:25px;font-size: 18px;}
+section div li:hover p{color:#f00;transition:1.5s;}
+section div li p{padding-top:15px;color:#0f0;font-family: "微软雅黑";transition:1.5s;}
+
+article{width: 100%;height: 1420px;margin-top:-30px;}
+
+article div.smallvideo{width: 30%;margin-left:5%;height: 360px;margin-left:65%;margin-top:-390px;}
+article div.smallvideo video{width: 100%;}
+article div.smallvideo ul.jieshao{width: 100%;height: 220px;}
+
+article ul.jieshao div#news span{display:block;padding:8px 2px;font-size:18px;font-weight:bold;background: #000;width: 100px;height:57px;color:#000;font-weight:800;color:#0f0;line-height: 57px;}
+article ul.jieshao div#news span.on{color:#f00;}
+article ul.jieshao div#news div{width: 240px;height: 150px;margin-top:10px;display:none;}
+article ul.jieshao div#news div.on{display:block;margin-left:100px;margin-top:-216px;}
+article ul.jieshao div#news img{width:300px;height: 216px;}
+
+article div.zhandui{width: 100%;height: 80px;margin-top:20px;}
+article div.zhandui ul li{width: 90%;height: 80px;font-size:30px;font-weight:bold;color:#fff;line-height:80px;margin-left: 5%;text-align: center;}
+article div.zhandui ul li a{color:#fff;}
+article div.zhandui ul div#menu{width: 100%;height: 50px;overflow:hidden;background: url(images/bg.jpg);z-index: 1800;}
+
+article div.zhandui ul div#menu ul.menu1{width: 100%;height:50px;text-align: center;font-family: "微软雅黑";color:#0f0;}
+article div.zhandui ul div#menu ul.menu1 li{font-size:20px;line-height:50px;}
+
+article div.zhandui ul div#menu ul.menu2{width: 40%;height: 185px;border:1px solid #fff;margin-left:30%;margin-top:10px;}
+article div.zhandui ul div#menu ul.menu2 li.menu21{width: 30%;height: 185px;}
+article div.zhandui ul div#menu ul.menu2 li.menu21 img{margin-top:20%;}
+article div.zhandui ul div#menu ul.menu2 li{float:left;width: 25%;height: 60px;font-size:12px;text-align:left;line-height:50px;}
+article div.zhandui ul div#menu ul.menu3{width: 90%;margin-left:5%;font-size:18px;color:#fff;line-height:30px;margin-top:20px;}
+article div.zhandui ul div#menu ul.menu4{width: 90%;margin-left: 5%;height: 530px;}
+article div.zhandui ul div#menu ul.menu4 li.zyry{font-size:22px;color:#0f0;line-height:50px;}
+article div.zhandui ul div#menu ul.menu4 li{font-size: 22px;line-height: 26px;height:26px;font-family: "微软雅黑";}
+article div.duiyuan{width: 90%;height: 900px;margin-top:50px;border:1px solid #fff;margin-left:5%;}
+article div.duiyuan li.dy1{height: 80px;font-size:30px;font-weight:bold;color:#fff;line-height:80px;text-align: center;width: 100%;}
+article div.duiyuan li{width: 50%;height: 150px;float:left;margin-top:10px;}
+article div.duiyuan li p{margin-left:35%;line-height:40px;margin-top:20px;color:#fff;font-size:20px;}
+aside{width: 90%;height: 700px;margin-left: 5%;}
+aside div{float:left;}
+aside div.zdsp{width: 100%;height: 340px;}
+aside div.zdsp ul{width: 21%;height: 100%;float:left;margin-right:2%;margin-top:10px;}
+aside div.zdsp ul li.zdsp1{width: 100%;height: 160px;overflow:hidden;}
+aside div.zdsp ul li.zdsp1 img{width: 100%;height: 100%;transition:1.5s;}
+aside div.zdsp ul li.zdsp1 img:hover{transform: scale(1.2);transition:1.5s;}
+aside div.zdsp ul li span{font-size:20px;font-weight:bold;color:#0f0;}
+aside div.zdsp ul li{font-size:14px;font-weight:bold;color:#fff;margin-left:5%;line-height:34px;}
+footer{width: 100%;height: 220px;border-top:4px solid #0f0;}
+footer div{float:left;}
+footer div.footer1{width: 20%;height: 100%;margin-left:5%;}
+footer div.footer1 ul li{width: 60%;margin-left:21%;height: 160px;padding-top:17px;}
+footer div.footer1 ul li img{width: 100%;height: 100%;}
+footer div.footer2{width: 23%;height: 100%;}
+footer div.footer2 ul{margin-top:20px;}
+footer div.footer2 ul li.dazi{width: 100%;height: 30px;font-size:20px;color:#fff;font-weight:bold;line-height:100%;}
+footer div.footer2 ul li{width: 100%;height:30px;line-height:30px;font-size:12px;color:#ccc;}
+footer div.footer3{width: 47%;height: 100%;}
+footer div.footer3 ul{width: 100%;height: 80px;margin-top: 10px;}
+footer div.footer3 ul.footer31 img{margin-left:62%;margin-top:30px;}
+footer div.footer3 ul li{width: 48%;height: 30px;margin-left:51%;}
+footer div.footer3 ul li.smalltp{width: 10%;margin-left:88%;}
+
+</style>
+</head>
+<body>
+<header>
+<video autoplay="autoplay" loop="loop" >
+        <source src="omggogoing.mp4" type="video/mp4">
+</video>
+<div id="had" style="background:url(images/fbg.jpg);opacity: 0.9; " >
+<ul class="logo">
+<li><a href="#"><img src="images/logo2.png"></a></li>	
+</ul>
+<ul class="daohang" id="nav">
+	<a href="#"><li class="shouye"><p>首页<br /><span>HOME</span></p></li></a>
+	<a href="about.html"><li><p>关于<br /><span>ABOUT</span></p></li></a>
+	<a href="#"><li><p>公益<br /><span>CHARITY</span></p></li></a>
+	<a href="#"><li><p>动态<br /><span>NEWS</span></p></li></a>
+	<a href="#"><li><p>商城<br /><span>SHOP</span></p></li></a>
+	<a href="#"><li><p>论坛<br /><span>RORUM</span></p></li></a>
+	<li class="bg" style="background:url(images/dhheng.png) no-repeat -6px -2px;background-size: 110%;"></li>
+</ul>
+<script>
+		var oUl1=document.getElementById("nav");
+		var oLi=oUl1.getElementsByTagName("li");
+		var oBg=oLi[oLi.length-1];
+		var iSpeed=0;
+		var timer=null;
+
+		for(var i=0;i<oLi.length;i++){
+		oLi[i].onmouseover=function(){
+			startMovea(oBg,this.offsetLeft);
+		}
+		oLi[i].onmouseout=function(){
+			startMovea(oBg,oLi[0].offsetLeft);
+		}	
+		}
+        function startMovea(obj,iTarget){
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function(){
+        iSpeed+=(iTarget-obj.offsetLeft)/5;
+        iSpeed*=0.7;
+        
+        //二.弹性运动
+        if(Math.abs(iSpeed)<1 && Math.abs(obj.offsetLeft-iTarget)<1){
+        	obj.style.left=iTarget+'px';
+        	clearInterval(obj.timer);
+        }else{
+        	obj.style.left=obj.offsetLeft+iSpeed+'px';
+        }
+        
+
+        },40);
+        }
+	</script>
+<ul class="zhuce">
+<li class="zhucelogo">
+<a href="#"><img src="images/timg.png" /></a>	
+</li>
+<li class="dlzhuce">
+<a href="#">登录丨注册</a>	
+</li>	
+</ul>		
+</div>
+	
+</header>
+
+<section style="background:url(images/fbg.jpg);">
+<div>
+<a href="javascript:void;"><li style="background:url(images/itbg.png) no-repeat -20px 10px;background-size: 120%;"><p>论坛家园<br /><span>BBS HOME</span></p></li></a>
+<a href="javascript:void;"><li style="background:url(images/itbg.png) no-repeat -20px 10px;background-size: 120%;"><p>星球游乐园<br /><span>GAME CENTER</span></p></li></a>
+<a href="javascript:void;"><li style="background:url(images/itbg.png) no-repeat -20px 10px;background-size: 120%;"><p>比赛视频<br /><span>VIDEOS</span></p></li></a>
+<a href="javascript:void;"><li style="background:url(images/itbg.png) no-repeat -20px 10px;background-size: 120%;"><p>APP下载<br /><span>APP DOWNLOAD</span></p></li></a>
+</div>	
+</section>
+
+<article style="background: url(images/bg.jpg);">
+<div id="playImages" class="play">
+	<ul class="big_pic">
+		<a class="mark_left" href="javascript:void"></a>
+		<a class="mark_right" href="javascript:void"></a>
+		<div class="prev"></div>
+		<div class="next"></div>
+		
+		
+
+		<li style="z-index:1"><img src="images/27088.jfif" /></li>
+		<li><img src="images/27111.jfif" /></li>
+		<li><img src="images/25888.jfif" /></li>
+		<li><img src="images/27088.jfif" /></li>
+		<li><img src="images/27111.jfif" /></li>
+		<li><img src="images/25888.jfif" /></li>
+	</ul>
+	<div class="small_pic">
+		<ul>
+			<li style="opacity:1; filter:alpha(opacity:100);"><img src="images/1.jpg" /></li>
+			<li><img src="images/2.jpg" /></li>
+			<li><img src="images/3.jpg" /></li>
+			<li><img src="images/4.jpg" /></li>
+			<li><img src="images/5.jpg" /></li>
+			<li><img src="images/6.jpg" /></li>
+		</ul>
+	</div>
+</div>	
+<div class="smallvideo">
+	<video autoplay="autoplay" loop="loop" >
+    <source src="images/index.mp4" type="video/mp4">
+    </video>
+    <ul class="jieshao">
+    <div id="news" >
+    <span class="on" style="font-size: 12px;">OMG 2014</span>
+    <span style="font-size: 12px;">OMG 2016</span>
+    <span style="font-size: 12px;">OMG 2017</span>
+  
+
+    <div class="on"><img src="images/omg2014.jpg" /></div>
+    <div><img src="images/omg2016.jpg" /></div>
+    <div><img src="images/omg2017.jpg" /></div>
+    </div>
+    <script>
+  var oNews=document.getElementById("news");
+  var oSpan=oNews.getElementsByTagName("span");
+  var oDiv=oNews.getElementsByTagName("div");
+    var num=oSpan.length;
+
+    for(i=0;i<oSpan.length;i++){
+      oSpan[i].index=i;
+        oSpan[i].onmouseover=function(){
+        for(var j=0;j<num;j++){//关所有
+            oSpan[j].className="";
+            oDiv[j].className=""; 
+        } 
+        this.className="on";//开一个
+        oDiv[this.index].className="on";
+        //this.index实现了,分类标题oSpan和oDiv一一对应关系
+        }
+    }
+
+</script>
+    
+	
+    </ul>
+</div>
+
+<div class="zhandui" style="background:url(images/fbg.jpg);z-index: 200;">
+<ul>
+	<li>
+		<a href="javascript:void;"><p>OMG战队简介</p></a>
+	</li>
+	<div id="menu" style="background:url(images/bg.jpg) ;    position:relative;">
+	<ul class="menu1">
+	<li style="cursor: pointer;">OMG战队---全称Oh My God电子竞技战队</li>	
+	</ul>
+	<ul class="menu2" >
+	    <li class="menu21">
+	    <img src="images/logo2.png">	
+	    </li>
+		<li>简称：omg</li>
+		<li>全称：omg</li>
+		<li>游戏：英雄联盟</li>
+		<li>国籍：中国</li>
+		<li>成立：2012年5月9日</li>
+		<li>经理：-</li>	
+	</ul>
+	<ul class="menu3">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OMG电子竞技俱乐部(全称：Oh My God)，创立于2012年6月，专注于"英雄联盟"项目的俱乐部，LOL团队在2013年GOSU统计积分全球前三队伍，2013年英雄联盟职业联赛春季赛冠军、2013年英雄联盟职业联赛夏季赛亚军，2013年S3赛季世界总决赛8强，2014年英雄联盟职业联赛春季赛常规赛冠军，2014年代表中国参加巴黎S4全明星比赛。2014年英雄联盟职业联赛春季赛季后赛季军。2014年LPL夏季赛亚军。
+	</ul>
+	<ul class="menu4">
+	<li class="zyry">主要荣誉</li>
+　　<li>2013年LPL春季赛常规赛亚军 季后赛冠军</li>
+　　<li>2013年WVW全国电子竞技精英赛 冠军</li>
+　　<li>2013年 Starswar8 冠军</li>
+　　<li>2013年 LPL夏季赛常规赛冠军 季后赛亚军</li>
+　　<li>2013年 S3总决赛中国区选拔赛 亚军</li>
+　　<li>2013年 S3世界总决赛 8强</li>
+　　<li>2013年 WCG英雄联盟中国区 冠军</li>
+　　<li>2013年 WCG英雄联盟世界总决赛 亚军</li>
+　　<li>2014年IET义乌国际电子竞技大赛英雄联盟 亚军</li>
+　　<li>2014年S4赛季巴黎全明星赛 亚军</li>
+　　<li>2014年LPL春季职业联赛常规赛冠军 季后赛季军</li>
+	</ul>	
+	</div>
+	<script>
+		var oDiv1=document.getElementById("menu");
+        oDiv1.onmouseover=function(){
+        	startMoveb(oDiv1,900);
+
+        }
+		oDiv1.onmouseout=function(){
+        	startMoveb(oDiv1,50);
+        }
+
+		
+		//弹性活动:obj:元素名称
+		var oSpeed=0;
+		var height=50;
+		var timer=null;
+
+        function startMoveb(obj,iTarget){
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function(){
+        oSpeed+=(iTarget-height)/10;
+        oSpeed*=0.7;
+        1
+        //二.弹性运动
+        if(Math.abs(oSpeed)<50 && Math.abs(height-iTarget)<50){
+        	obj.style.height=iTarget+'px';
+        	clearInterval(obj.timer);
+        }else{
+        	height+=oSpeed;
+        	obj.style.height=height+oSpeed+'px';
+        }
+        
+
+        },40);
+        }
+	</script>
+</ul>	
+</div>
+ <div class="duiyuan" style="z-index: 1;" >
+	    <ul>
+		<li class="dy1" style="background:url(images/fbg.jpg);">
+			<p>OMG队员介绍</p>
+		</li>
+		<li style="background: url(images/gogoing.jpg) no-repeat; ">
+		
+		<p>姓名：高地平<br />
+		      OMG战队前上单选手<br />
+		      常用英雄：瑞兹、鳄鱼、人马....</p>	
+		</li>
+		<li style="background: url(images/loving.jpg) no-repeat; ">
+		<p>姓名：尹乐<br />
+		      OMG战队前打野选手<br />
+		      常用英雄：螳螂、寡妇、狮子狗....</p>
+		</li>
+		<li style="background: url(images/cool.jpg) no-repeat; ">
+		<p>姓名：余家俊<br />
+		      OMG战队前中单选手<br />
+		      常用英雄：狐狸、辛得拉、发条....</p>
+		</li>
+		<li style="background: url(images/san.jpg) no-repeat; ">
+		<p>姓名：郭俊良<br />
+		      OMG战队前ADC选手<br />
+		      常用英雄：老鼠、大嘴、韦鲁斯....</p>	
+		</li>
+		<li style="background: url(images/cloud9.jpg) no-repeat; ">
+			<p>姓名：胡振威<br />
+		      OMG战队前辅助选手<br />
+		      常用英雄：机器人、锤石、风女....</p>
+		</li>
+		<li style="background: url(images/xiyang.jpg) no-repeat; ">
+			<p>姓名：胡彬<br />
+		      OMG战队上单选手<br />
+		      常用英雄：大树、泰坦、瑞兹....</p>
+		</li>
+		<li style="background: url(images/smlz.jpg) no-repeat;background-size: 28%; ">
+			<p>姓名：韩金<br />
+		      OMG战队ADC选手<br />
+		      常用英雄：老鼠、烬、韦鲁斯....</p>
+		</li>
+		<li style="background: url(images/icon.jpg) no-repeat;background-size: 28%; ">
+			<p>姓名：谢天宇<br />
+		      OMG战队中单选手<br />
+		      常用英雄：发条、辛得拉、加里奥....</p>
+		</li>
+		<li style="background: url(images/yjb.jpg) no-repeat;background-size: 28%; "> 
+			<p>姓名：刘时宇<br />
+		      OMG战队辅助选手<br />
+		      常用英雄：风女、璐璐、牛头....</p>
+		</li>
+		<li style="background: url(images/five.jpg) no-repeat;background-size: 28%; ">
+			<p>姓名：刘时宇<br />
+		      OMG战队辅助选手<br />
+		      常用英雄：风女、璐璐、牛头....</p>
+		</li>
+	
+		</ul>
+		</div> 	
+</article>
+<aside style="background:url(images/bg.jpg);">
+<!-- 	<div class="zdsp">
+    <ul>
+        <li class="zdsp1">
+        <img src="images/23585.png">	
+        </li>
+    	<li>
+    	<span>2017LPLS7赛季选拔赛</span><br />
+    	IG VS OMG<br />
+    	第一局OMG ban<br />
+    	辛德拉，凯南，蛇女，滑板鞋..	
+    	</li>	
+    </ul>
+	<ul>
+		<li class="zdsp1">
+		<img src="images/23878.png">	
+		</li>
+    	<li>
+    	<span>2017LPL夏季赛</span><br />
+    	LGD VS OMG<br />
+    	蓝色方：OMG<br />
+    	红色方：LGD	
+    	</li>
+	</ul>
+	<ul>
+		<li class="zdsp1">
+		<img src="images/25168.png">	
+		</li>
+    	<li>
+    		<span>2017LPLS7赛季季后赛</span><br />
+    	OMG VS IG<br />
+    	第一局OMG ban<br />
+    	兰博，皇子，蜘蛛，滑板鞋..
+    	</li>
+	</ul>
+	<ul>
+		<li class="zdsp1">
+		<img src="images/25168.png">	
+		</li>
+    	<li>
+    		<span>2017LPLS7赛季季后赛</span><br />
+    	OMG VS IG<br />
+    	第一局OMG ban<br />
+    	兰博，皇子，蜘蛛，滑板鞋..
+    	</li>
+	</ul>
+	<ul>
+		<li class="zdsp1">
+		<img src="images/123453.jpg">	
+		</li>
+    	<li>
+    		<span>2017LPLS7赛季季后赛</span><br />
+    	OMG VS MSF<br />
+    	第一局OMG ban<br />
+    	兰博，加里奥，蜘蛛，贾克斯..
+    	</li>
+	</ul>
+         <ul>
+		<li class="zdsp1">
+		<img src="images/123452.jpg">	
+		</li>
+    	<li>
+    		<span>2017LPLS7赛季季后赛</span><br />
+    	OMG VS IG<br />
+    	第一局OMG ban<br />
+    	兰博，皇子，蜘蛛，滑板鞋..
+    	</li>
+	</ul>
+	<ul>
+		<li class="zdsp1">
+		<img src="images/123451.jpg">	
+		</li>
+    	<li>
+    		<span>2017LPLS7赛季季后赛</span><br />
+    	OMG VS SKT<br />
+    	第一局OMG ban<br />
+    	兰博，皇子，蜘蛛，盲僧..
+    	</li>
+	</ul>
+	<ul>
+		<li class="zdsp1">
+		<img src="images/12345.jpg">	
+		</li>
+    	<li>
+    		<span>2017LPLS7灵药宣传</span><br />
+    	灵药个人视频<br />
+    	loving<br />
+    	兰博，皇子，蜘蛛，滑板鞋..
+    	</li>
+	</ul>
+</div> -->
+<div class="htmleaf-container">
+		
+		<div class="container mt50">
+		    <div class="row">
+		        <div class="col-md-3 col-sm-6">
+		            <div class="box">
+		                <img src="img/4.png" alt="">
+		                <div class="over-layer">
+		                    <h3 class="title">中国LPL夏季赛</h3>
+		                    <p class="description">Lorem ipsum dolor sit amet, consectetur</p>
+		                    
+		                </div>
+		            </div>
+		        </div>
+
+		        <div class="col-md-3 col-sm-6">
+		            <div class="box">
+		                <img src="img/5.png" alt="">
+		                <div class="over-layer">
+		                    <h3 class="title">中国LPL夏季赛</h3>
+		                    <p class="description">Lorem ipsum dolor sit amet, consectetur </p>
+		                    
+		                </div>
+		            </div>
+		        </div>
+
+		        <div class="col-md-3 col-sm-6">
+		            <div class="box">
+		                <img src="img/6.png" alt="">
+		                <div class="over-layer">
+		                    <h3 class="title">中国LPL夏季赛</h3>
+		                    <p class="description">Lorem ipsum dolor sit amet, consectetur </p>
+		                    
+		                </div>
+		            </div>
+
+		        </div>
+
+		        <div class="col-md-3 col-sm-6">
+		            <div class="box">
+		                <img src="img/7.jpg" alt="">
+		                <div class="over-layer">
+		                    <h3 class="title">S4全球总决赛</h3>
+		                    <p class="description">Lorem ipsum dolor sit amet, consectetur </p>
+		                    
+		                </div>
+		            </div>
+		            
+		        </div>
+		        <div class="col-md-3 col-sm-6">
+		            <div class="box">
+		                <img src="img/7.jpg" alt="">
+		                <div class="over-layer">
+		                    <h3 class="title">S4全球总决赛</h3>
+		                    <p class="description">Lorem ipsum dolor sit amet, consectetur </p>
+		                    
+		                </div>
+		            </div>
+		            
+		        </div>
+		        <div class="col-md-3 col-sm-6">
+		            <div class="box">
+		                <img src="img/7.jpg" alt="">
+		                <div class="over-layer">
+		                    <h3 class="title">S4全球总决赛</h3>
+		                    <p class="description">Lorem ipsum dolor sit amet, consectetur </p>
+		                    
+		                </div>
+		            </div>
+		            
+		        </div>
+		        <div class="col-md-3 col-sm-6">
+		            <div class="box">
+		                <img src="img/7.jpg" alt="">
+		                <div class="over-layer">
+		                    <h3 class="title">S4全球总决赛</h3>
+		                    <p class="description">Lorem ipsum dolor sit amet, consectetur </p>
+		                    
+		                </div>
+		            </div>
+		            
+		        </div>
+		        <div class="col-md-3 col-sm-6">
+		            <div class="box">
+		                <img src="img/7.jpg" alt="">
+		                <div class="over-layer">
+		                    <h3 class="title">S4全球总决赛</h3>
+		                    <p class="description">Lorem ipsum dolor sit amet, consectetur </p>
+		                    
+		                </div>
+		            </div>
+		            
+		        </div>
+		    </div>
+		</div>
+		
+	</div>
+	
+	
+	<div class="zdtb"></div>
+</aside>
+<footer style="background:url(images/bg.jpg);">
+<div class="footer1" style="background: url(images/pewm.png) no-repeat 45px 0;background-size: 70%;">
+	<ul>
+	<li><img src="images/ewm.jpg" /></li>	
+	</ul>
+</div>
+<div class="footer2">
+	<ul>
+		<li class="dazi">扫码下载</li>
+		<li class="dazi">OMG APP</li>
+		<li>电话021-31027100</li>
+		<li>商务合作邮箱：market@omg-esc.com 李先生</li>
+		<li>基地地址：上海市宝山区长江路258号中成智谷A4A5</li>
+	</ul>
+</div>
+<div class="footer3">
+    <ul class="footer31">
+    	<img src="images/hzhb.png">
+    </ul>
+	<ul>
+		<li>Copyright © 2015 噢麦嘎（上海）网络科技有限公司</li>
+		<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All Rights Reserved. 沪ICP备15005712号-1</li>
+		<li class="smalltp">
+			<a href="javascript:void;"><img src="images/ic_sina.png"></a>
+			<a href="javascript:void;"><img src="images/ic_wx.png"></a>
+		</li>
+	</ul>	
+</div>	
+</footer>	    
+</body>
+</html>

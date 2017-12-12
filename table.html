@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+    
+#news span{display:block;padding:8px 2px;font-size:14px;font-weight:bold;background: #000;margin-right:-4px;width: 100px;height: 35px;color:#000;font-weight:800;color:#0f0;}
+
+#news div{width: 240px;height: 150px;margin-top:10px;display:none;}
+#news div.on{display:block;margin-left:100px;margin-top:-154px;}
+#news img{width:240px;height: 150px;}
+	</style>
+</head>
+<body>
+	<div id="news">
+  <span class="on">湖人总经理</span>
+  <span>凯尔特人</span>
+  <span>安东尼乔治</span>
+  
+
+    <div class="on"><img src="images/4.jpg" /></div>
+    <div><img src="images/17.jpg" /></div>
+    <div><img src="images/11.jpg" /></div>
+   
+    
+</div>  
+
+<script>
+  var oNews=document.getElementById("news");
+  var oSpan=oNews.getElementsByTagName("span");
+  var oDiv=oNews.getElementsByTagName("div");
+    var num=oSpan.length;
+
+    for(i=0;i<oSpan.length;i++){
+      oSpan[i].index=i;
+        oSpan[i].onmouseover=function(){
+        for(var j=0;j<num;j++){//关所有
+            oSpan[j].className="";
+            oDiv[j].className=""; 
+        } 
+        this.className="on";//开一个
+        oDiv[this.index].className="on";
+        //this.index实现了,分类标题oSpan和oDiv一一对应关系
+        }
+    }
+
+</script>    
+</body>
+</html>
